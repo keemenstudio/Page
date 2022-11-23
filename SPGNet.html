@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Mengxuan Liu</title>
+
+        <!-- CSS FILES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700;900&display=swap" rel="stylesheet">
+        
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/magnific-popup.css">
+
+        <link href="css/aos.css" rel="stylesheet">
+
+        <link href="css/templatemo-nomad-force.css" rel="stylesheet">
+<!--
+
+TemplateMo 567 Nomad Force
+
+https://templatemo.com/tm-567-nomad-force
+
+-->
+    </head>
+    
+    <body>
+    
+        <main>
+
+            <section class="hero" id="hero">
+                <div class="heroText">
+                    <h1 class="news-detail-title text-white mt-lg-5 mb-lg-4" data-aos="zoom-in" data-aos-delay="300">
+                        SPGNet: Spatial Projection Guided 3D Human Pose Estimation in Low Dimensional Space
+                    </h1>
+
+                    <div class="d-flex justify-content-center align-items-center">
+
+                        <a href="#" class="social-share-link bi-bookmark-fill ms-3 me-4"></a>
+                        
+                        <span>Auguest, 2022</span>
+                    </div>
+                </div>
+
+                <div class="videoWrapper">
+                    <img src="images/SPGNet_bg.png" class="img-fluid news-detail-image" alt="">
+                </div>
+
+                <div class="overlay"></div>
+            </section>
+
+            <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <strong>Mengxuan Liu</strong>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.html#hero">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#about">About Me</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#Timeline">Timeline</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#news">Projects</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#contact">Contact Me</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <section class="news-detail section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-10 mx-auto">
+                            <h2 class="mb-3" data-aos="fade-up">Publication on ICSM-2022</h2>
+
+                            <p class="me-4" data-aos="fade-up">
+                                I and my teammates Zihan Wang and Ruimin Chen proposed a new method about human 3D pose estimation, 
+                                <a rel="nofollow" href="https://arxiv.org/abs/2206.01867" target="_blank"> <b>SPGNet: Spatial Projection Guided 3D Human Pose Estimation in Low Dimensional Space</b></a>, 
+                                and published it on <a rel="nofollow" href="https://smartmultimedia.org/2021/" target="_blank"> <b>ICSM-2022</b></a>.
+                            </p>
+
+                            <p class="me-4" data-aos="fade-up">
+                                SPGNet mixes multi-dimensional re-projection into supervised learning. 
+                                In this method, the 2D-to-3D-lifting network predicts the global position and coordinates of the 3D human pose. 
+                                Then, we re-project the estimated 3D pose back to the 2D key points along with spatial adjustments. 
+                                The loss functions compare the estimated 3D pose with the 3D pose ground truth, and re-projected 2D pose with the input 2D pose. 
+                                In addition, we propose a kinematic constraint to restrict the predicted target with constant human bone length. 
+                                Based on the estimation results for the dataset Human3.6M, 
+                                our approach outperforms many state-of-the-art methods both qualitatively and quantitatively.
+                            </p>
+
+                            <img src="images/SPGNet_chart.png" class="card-img">
+                            <figcaption class="figure-caption text-end">SPGNet flow chart</figcaption>
+
+                            <p class="me-4" data-aos="fade-up">
+                                <b>Acknowledgement: </b>I would like to express my special thanks of gratitude to Guanfang Dong, and our professor Anup Basu.
+                            </p>
+
+                            <p class="me-4" data-aos="fade-up">
+                                Last Update: 2022-09-01
+                            </p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-12">
+                        <h5 class="text-white">
+                            <i class="bi-geo-alt-fill me-2"></i>
+                            Alberta, Canada
+                        </h5>
+
+                    </div>
+
+                    <div class="col-6">
+                        <class="copyright-text mb-0>Copyright © Mengxuan Liu 2022 
+                    </p>
+                    
+                    
+                    </div>
+
+
+                </div>
+            </section>
+        </footer>
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/aos.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/magnific-popup-options.js"></script>
+        <script src="js/scrollspy.min.js"></script>
+        <script src="js/custom.js"></script>
+
+    </body>
+</html>

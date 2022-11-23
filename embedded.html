@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Mengxuan Liu</title>
+
+        <!-- CSS FILES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700;900&display=swap" rel="stylesheet">
+        
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/magnific-popup.css">
+
+        <link href="css/aos.css" rel="stylesheet">
+
+        <link href="css/templatemo-nomad-force.css" rel="stylesheet">
+<!--
+
+TemplateMo 567 Nomad Force
+
+https://templatemo.com/tm-567-nomad-force
+
+-->
+    </head>
+    
+    <body>
+    
+        <main>
+
+            <section class="hero" id="hero">
+                <div class="heroText">
+                    <h1 class="news-detail-title text-white mt-lg-5 mb-lg-4" data-aos="zoom-in" data-aos-delay="300">
+                        Embedded System Design
+                    </h1>
+
+                    <div class="d-flex justify-content-center align-items-center">
+
+                        <a href="#" class="social-share-link bi-bookmark-fill ms-3 me-4"></a>
+                        
+                        <span>2020 Fall</span>
+                    </div>
+                </div>
+
+                <div class="videoWrapper">
+                    <img src="images/embedded_ide.png" class="img-fluid news-detail-image" alt="">
+                </div>
+
+                <div class="overlay"></div>
+            </section>
+
+            <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <strong>Mengxuan Liu</strong>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.html#hero">Home</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#about">About Me</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#Timeline">Timeline</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#news">Projects</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#contact">Contact Me</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <section class="news-detail section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-10 mx-auto">
+                            <h2 class="mb-3" data-aos="fade-up">24-hour Clock</h2>
+
+                            <p class="me-4" data-aos="fade-up">
+                                I programmed C language in ATMega328P by MPLAB X IDE to build a 24-hour clock on the LCD screen. 
+                                The LCD clock shows the time and updates the time per second. 
+                                Three pushbuttons were able to interrupt the system and adjust the time 
+                                in a second, minute or hour number to adjust to the user's local time. 
+                                The time display is chosen to be in 24-hour format. 
+                                The LCD clock has a background light, 
+                                so no worries about reading the clock time under bright or dark room light. 
+                            </p>
+
+                            <pre><code>
+void timeCounter_init(){
+    TCCR1A = 0; // Disengages OC1A OC1B pins from timer
+    TCCR1B = (1&lt;&lt;WGM12); // mode 4 [WGM13:10] = 0100, CTC, top = OCR1A
+                                
+    // timer pre scaler = 256
+    TCCR1B |= (1&lt;&lt;CS12);
+                                
+    // interrupt every (8000000)/256 = 31250 is 1 second)
+    OCR1A = 31250;
+                                
+    // enable output compare
+    TIMSK1 |= (1&lt;&lt;OCIE1A);
+                                
+    // enable total interrupt
+    sei();
+}
+                            </code></pre>
+                            <figcaption class="figure-caption text-end">Timer counter setting in C for ATMega328P</figcaption>
+
+                            <img src="images/embedded_clock.png" class="card-img">
+                            <figcaption class="figure-caption text-end">Time setting in 24-hour</figcaption>
+                        
+
+                        </div>
+
+                        <div class="col-lg-8 col-10 mx-auto">
+                            <h2 class="mb-3 mt-5" data-aos="fade-up">Two-wheels Auto Balancing Robot</h2>
+
+                            <p class="me-4" data-aos="fade-up">
+                                Two wheels auto balancing robot includes two DC motors with wheels, a 2000mAh battery, a motor driver, 
+                                a microchip controller and an accelerometer and gyro. 
+                                The robot is designed to be auto-balanced while the external force is introduced. 
+                                The system is unstable originally because the center of gravity causes the body of the robot to fall to one side. 
+                                A closed loop system with a PID controller stabilizes the robot by keeping the center of gravity 
+                                of the whole system perpendicular to the ground.
+                            </p>
+                            
+                            <img src="images/embedded_robot.jpg" class="card-img">
+                            <figcaption class="figure-caption text-end">Robot testing</figcaption>
+
+                            
+
+                            <p class="me-4 mt-4" data-aos="fade-up">
+                                PID controller is used to stabilizing the robot based on the error input. 
+                                The input of the feedback system is the angle between 90 degrees (perpendicular to the ground) and the body of the robot.
+                            </p>
+                            
+                            <p class="text-center" data-aos="fade-up">
+                                <MATH> 𝑠𝑖𝑔𝑛𝑎𝑙 𝑜𝑢𝑡𝑝𝑢𝑡 = 𝐾𝑝 ∗ 𝑒(𝑡) + 𝐾𝑖 ∗ ∫𝑒(𝑡)𝑑𝑡 + 𝐾𝑑∗(𝑑𝑒(𝑡)/𝑑𝑡) </MATH>
+                            </p>
+
+                            <p class="me-4 mt-4" data-aos="fade-up">
+                                Where 𝑒(𝑡) is the error input, ∫ 𝑒(𝑡)𝑑𝑡 is the cumulated errors over time, and 𝑑𝑒(𝑡)/𝑑𝑡
+                                is the rate of change of current error.The 𝐾𝑝,𝐾𝑖,𝐾𝑑 three parameters decide the weights of each term.
+                                Replacing the continuous-time signal to discrete-time signal for MCU, the equation is:
+                            </p>
+
+                            <p class="text-center" data-aos="fade-up">
+                                <MATH> 𝑑𝑖𝑔𝑖𝑡𝑎𝑙 𝑠𝑖𝑔𝑛𝑎𝑙 𝑜𝑢𝑡𝑝𝑢𝑡 = 𝐾𝑝 ∗ 𝑒 + 𝐾𝑖 ∗ 𝑠𝑢𝑚(𝑒) ∗ 𝑑𝑡 + 𝐾𝑑 ∗(𝑒 − 𝑒′)/𝑑𝑡 </MATH>
+                            </p>
+
+                            <p class="me-4 mt-4" data-aos="fade-up">
+                                𝑒 is the error between 𝜃, current angle measurement and the reference angle, 𝑠𝑢𝑚(𝑒) is the sum of each error measured by time,
+                                𝑒′ is the previous error, and the 𝑑𝑡 is the sample time, which is 0.005 seconds for ESP8266.
+                            </p>
+                            
+                            <img src="images/embedded_chart.png" class="card-img">
+                            <figcaption class="figure-caption text-end"> Block diagram of the optimized control system</figcaption>
+
+                            <p class="me-4 mt-4" data-aos="fade-up">
+                                During the testing, when the external force is added to the robot, 
+                                the present overshoot to the step response is 48.45%, with peak time 1.1s, rise time 0.66s, and the settling time 2.43s.
+                                The angle PID controller parameters are: Kp = 60; Ki = 220; Kd = 18; 
+                                The velocity PI controller parameters are: Kp = 0.15; Ki = 0.00025.
+                            </p>
+
+                            <img src="images/embedded_result.png" class="card-img">
+                            <figcaption class="figure-caption text-end"> Error in degree over time</figcaption>
+
+                            <p class="me-4" data-aos="fade-up">
+                                Last Update: 2022-08-17
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-12">
+                        <h5 class="text-white">
+                            <i class="bi-geo-alt-fill me-2"></i>
+                            Alberta, Canada
+                        </h5>
+
+                    </div>
+
+                    <div class="col-6">
+                        <class="copyright-text mb-0>Copyright © Mengxuan Liu 2022 
+                    </p>                
+                    
+                    </div>
+
+
+                </div>
+            </section>
+        </footer>
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/aos.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/magnific-popup-options.js"></script>
+        <script src="js/scrollspy.min.js"></script>
+        <script src="js/custom.js"></script>
+
+    </body>
+</html>
