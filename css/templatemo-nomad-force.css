@@ -863,3 +863,10 @@ strong {
 	padding: 0;
 	font-family: 'Raleway', sans-serif;
 }
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}

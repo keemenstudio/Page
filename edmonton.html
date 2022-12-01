@@ -40,7 +40,7 @@ https://templatemo.com/tm-567-nomad-force
             <section class="hero" id="hero">
                 <div class="heroText">
                     <h1 class="news-detail-title text-white mt-lg-5 mb-lg-4" data-aos="zoom-in" data-aos-delay="300">
-                        Data Analysis
+                        Data Analysis II
                     </h1>
 
                     <div class="d-flex justify-content-center align-items-center">
@@ -101,11 +101,46 @@ https://templatemo.com/tm-567-nomad-force
                             <h2 class="mb-3" data-aos="fade-up">Edmonton House Price Prediction</h2>
 
                             <p class="me-4" data-aos="fade-up">
-                                
+                                <b>Data Cleaning:</b> There are over 40000 Edmonton house price data with 26 features. Drop the missing columns and replaces the categorical data with numeric numbers.
                             </p>
+
+                            <img src="images/edmonton_model.png" class="card-img">
+                            <figcaption class="figure-caption text-end">Data Cleaning</figcaption>
+
+                            <p class="me-4" data-aos="fade-up">
+                                <b>Exploratory Data Analysis(EDA):</b> Plot the correlation matrix and price-location heat map, and join the missing data to find that training data split into two main categories:  with the built house or without. 
+                            </p>
+
+                            
 
                             <img src="images/edmonton_p2.png" class="card-img">
                             <figcaption class="figure-caption text-end">Edmonton House Price Map</figcaption>
+
+                            <p class="me-4" data-aos="fade-up">
+                                <b>Models:</b>
+                                Linear regression,
+                                Lasso,
+                                
+                                Support Vector Regressor,
+                                
+                                Decision tree,
+                                Random forest,
+                                Gradient boosting,
+                                
+                                Multi-layer perceptron (MLP),
+                                Radial basis neural network (RBFN)
+                            </p>
+
+                            <img src="images/edmonton_feature.png" class="card-img">
+                            <figcaption class="figure-caption text-end">Gradient Boosting Feature Importance (Left: House Built, Right: House not Built)</figcaption>
+
+                            <p class="me-4" data-aos="fade-up">
+                                Among all the models, the <b>gradient boosting regressor</b> performs best and then makes the <b>backward feature selection</b> with <b>10-fold cross-validation</b>.
+                            </p>
+
+                            <p class="me-4" data-aos="fade-up">
+                                Mean Absolute Persentage Error for (MAPE) gradient boosting regressor is 4.46%, improved 49% from the baseline model (linear regression, MAPE = 8.88%).
+                            </p>
 
                             <p class="me-4" data-aos="fade-up">
                                 Last Update: 2022-12-01

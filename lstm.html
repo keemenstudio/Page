@@ -24,7 +24,13 @@
         <link href="css/aos.css" rel="stylesheet">
 
         <link href="css/templatemo-nomad-force.css" rel="stylesheet">
+<!--
 
+TemplateMo 567 Nomad Force
+
+https://templatemo.com/tm-567-nomad-force
+
+-->
     </head>
     
     <body>
@@ -34,19 +40,19 @@
             <section class="hero" id="hero">
                 <div class="heroText">
                     <h1 class="news-detail-title text-white mt-lg-5 mb-lg-4" data-aos="zoom-in" data-aos-delay="300">
-                        Detective: The Mountain City
+                        Data Analysis I
                     </h1>
 
                     <div class="d-flex justify-content-center align-items-center">
 
                         <a href="#" class="social-share-link bi-bookmark-fill ms-3 me-4"></a>
                         
-                        <span>From 2019</span>
+                        <span>December, 2022</span>
                     </div>
                 </div>
 
                 <div class="videoWrapper">
-                    <img src="images/detective_bg.png" class="img-fluid news-detail-image" alt="">
+                    <img src="images/lstm_bk.png" class="img-fluid news-detail-image" alt="">
                 </div>
 
                 <div class="overlay"></div>
@@ -92,72 +98,36 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 col-10 mx-auto">
-                            <h2 class="mb-3" data-aos="fade-up">Game on Steam</h2>
+                            <h2 class="mb-3" data-aos="fade-up">Multiple Time Series Prediction</h2>
+
+                            <img src="images/lstm_company.png" class="card-img">
 
                             <p class="me-4" data-aos="fade-up">
-                                <a rel="nofollow" href="https://store.steampowered.com/app/2002310/Detective_The_Mountain_City/" target="_blank"> <b>DETECTIVE: THE MOUNTAIN CITY (Steam)</b></a>
-                                is a 3D pixel-art puzzle adventure game. 
-                                In this game, players play as a detective who newly arrived in the mountain city, helping the local police solve the crime. 
-                                Players need to be able to use their powers of deduction to find the killers and bring them to justice. 
-                                Players are searching for evidence at the crime scene, analyzing clues and finding the hidden stories behind each murder.
-                            </p>
-
-                            <iframe width="100%" height="10%"  src="https://www.youtube.com/embed/TaY9UozSBY4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            <figcaption class="figure-caption text-end">YouTube Vlog</figcaption>
-
-                            <p class="me-4" data-aos="fade-up">
-                                I planned for this game for over three years and went through several iterations. 
-                                Game development was completely my personal interest and not related to my current career. 
-                                Starting the first Unity3D tutorial on YouTube in 2018, I self-learnt all the related skills to develop games. 
-                                Including Unity3D Engine, game design, programming in C#, pixel artwork, Blender 3d modelling, and publishing.
+                                In the train data that I cleaned, there are 3,000,887 numbers of data that contains 54 different stores with 33 different products group and their sales data in the time range from 2013-01-01 to 2017-08-15. For each day, there are 54 * 33 equals 1782 time series sales data.
                             </p>
                             
-                            <img src="images/detective_unity.png" class="card-img">
-                            <figcaption class="figure-caption text-end">Collider and Trigger in Unity3D</figcaption>
-
-                            <p class="me-4 mt-4" data-aos="fade-up">
-                                Later, I recruited members of my team who shared the same interests and passions in gaming and assigned different tasks to them based on their specialization. 
-                                Currently, we have four team members working on this project and planning to lunch the game in 2023. 
-                            </p>
-
-                            <img src="images/detective_dialog.png" class="card-img">
-                            <figcaption class="figure-caption text-end">Screenshot of the game</figcaption>
-
-                            <img src="images/detective_blender.png" class="card-img">
-                            <figcaption class="figure-caption text-end">Screenshot of the game</figcaption>
-
-                            <p class="me-4 mt-4" data-aos="fade-up">
-                                Find out more:
-                            </p>
-
-                            <!-- Add icon library -->
-                            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-                            <p data-aos="fade-up"> 
-                                <a href="https://store.steampowered.com/app/2002310/Detective_The_Mountain_City/" class="fa fa-steam-square"></a>
-                                <a href="https://www.youtube.com/channel/UCtryH9hxNCD80faYCn0h0zA" class="fa fa-youtube-play"></a>
-                            </p>
-                            <!-- Add font awesome icons -->
-                            
-
-
-                            <p class="col-sm-2" data-aos="fade-up"> 
-                                <a><img  class="card-img"></a>
-                            </p>
-
-                            
+                            <img src="images/lstm_data.png" class="card-img">
 
                             <p class="me-4" data-aos="fade-up">
-                                <b>Acknowledgement: </b>I would like to express my special thanks of gratitude to Chengdu Good Team Studio, ZM ART Education and FangFangDeTu.
+                                The architecture of the LSTM model is designed in three main layers, each layer contains one LSTM layer, one batch normalization layer and one dropout layer. Finally, add a time-distributed layer. 
                             </p>
+
+                            <img src="images/lstm_layer.png" class="card-img">
 
                             <p class="me-4" data-aos="fade-up">
-                                Last Update: 2022-11-11
+                                LSTM successfully predict the future 16 days sales data with acceptable errors. Evaluation uses Root Mean Squared Logarithmic Error (RMSLE)
                             </p>
 
-                            <p class="col-sm-2" data-aos="fade-up"> 
-                                <a><img  class="card-img"></a>
-                                <a><img  class="card-img"></a>
-                                <a><img  class="card-img"></a>
+
+                           
+
+                            <p class="me-4" data-aos="fade-up">Empty Entry: 4.3796</p>
+                            <p class="me-4" data-aos="fade-up">BaseLine: 0.73163</p>
+                            <p class="me-4" data-aos="fade-up">ARIMA: 0.56345</p>
+                            <p class="me-4" data-aos="fade-up">LSTM: <b>0.47928</b></p>
+
+                            <p class="me-4" data-aos="fade-up">
+                                Last Update: 2022-12-01
                             </p>
 
                         </div>
@@ -178,6 +148,7 @@
                             <i class="bi-geo-alt-fill me-2"></i>
                             Alberta, Canada
                         </h5>
+
                     </div>
 
                     <div class="col-6">
@@ -186,6 +157,7 @@
                     
                     
                     </div>
+
 
                 </div>
             </section>
